@@ -11,16 +11,17 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.css" />
 
 <script>
-	$(document).ready(function(){
-      var data = ko.observableArray([{id: 1, text: "A"}, {id: 2, text: "B"}]);
-      var value = ko.observable();
-	    ko.applyBindings({data: data, value: value});
-	});
+    $(document).ready(function(){
+        var data = ko.observableArray([{id: 1, text: "A"}, {id: 2, text: "B"}]);
+        var value = ko.observable();
+        ko.applyBindings({data: data, value: value});
+    });
 </script>
+
 </head>
 <body>
     <div style="position: relative; width: 350px;">
-	    <select style="width: 100%;" data-bind="value: value, valueAllowUnset: true, options: data, optionsText: 'text', optionsValue: 'id', select2: { placeholder: 'Select a State', allowClear: true }"></select>
+	<select style="width: 100%;" data-bind="value: value, valueAllowUnset: true, options: data, optionsText: 'text', optionsValue: 'id', select2: { placeholder: 'Select an option...', allowClear: true }"></select>
     </div>
 </body>
 </html>
