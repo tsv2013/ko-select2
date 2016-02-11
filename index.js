@@ -12,10 +12,10 @@
 	        if("value" in allBindings) {
 	            var newValue = "" + ko.unwrap(allBindings.value);
 	            if((allBindings.select2.multiple || el.multiple) && newValue.constructor !== Array) {                
-	                select2.val(newValue.split(","));
+	                select2.val([newValue.split(",")]);
 	            }
 	            else {
-	                select2.val(newValue);
+	                select2.val([newValue]);
 	            }
 	        }                    
 	    }
